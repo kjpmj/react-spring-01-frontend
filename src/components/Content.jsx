@@ -4,6 +4,8 @@ import { Route, Switch } from 'react-router-dom';
 import ReportWeekly from './menus/ReportWeekly';
 import ReportProject from './menus/ReportProject';
 import ReportQuarter from './menus/ReportQuarter';
+import NotFound from './error/NotFound';
+import Home from './menus/Home';
 
 const ContainerStyle = css`
   display: flex;
@@ -17,9 +19,11 @@ function Content() {
       <h2>Contents</h2>
       <div>
         <Switch>
+          <Route path="/" component={Home} exact />
           <Route path="/report/weekly" component={ReportWeekly} />
           <Route path="/report/quarter" component={ReportQuarter} />
           <Route path="/report/project" component={ReportProject} />
+          <Route component={NotFound} />
         </Switch>
       </div>
     </div>
