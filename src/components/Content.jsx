@@ -6,6 +6,7 @@ import ReportProject from './menus/ReportProject';
 import ReportQuarter from './menus/ReportQuarter';
 import NotFound from './error/NotFound';
 import Home from './menus/Home';
+import Error from './menus/Error';
 
 const ContainerStyle = css`
   display: flex;
@@ -23,6 +24,7 @@ function Content() {
           <Route path="/report/weekly" component={ReportWeekly} />
           <Route path="/report/quarter" component={ReportQuarter} />
           <Route path="/report/project" component={ReportProject} />
+          <Route path="/report/error" component={Error} />
           <Route component={NotFound} />
         </Switch>
       </div>

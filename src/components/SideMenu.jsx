@@ -22,6 +22,9 @@ function SideMenu() {
         <li>
           <Link to="/report/project">프로젝트 투입</Link>
         </li>
+        <li>
+          <Link to="/report/error">에러나게 하기</Link>
+        </li>
       </ul>
     </div>
   );
